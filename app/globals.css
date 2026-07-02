@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wall: #010312;
+  --color-paper: #f3ede0;
+  --color-bronze: #b8763e;
+  --color-bronze-deep: #5c3a21;
+  --color-stone: #8a7b68;
+
+  --font-display: var(--font-display), serif;
+  --font-body: var(--font-body), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
