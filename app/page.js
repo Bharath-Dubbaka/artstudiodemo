@@ -16,7 +16,7 @@ export default function Home() {
         />
       </RevealFrame>
 
-      <div className="mx-auto max-w-xl space-y-6 px-6 py-32 font-body text-stone">
+      <div className="mx-auto max-w-xl space-y-6 px-6 py-12 md:py-20 lg:py-32 font-body text-stone">
         <p>
           Every room loops back to the door you came through — that&apos;s the
           whole idea behind Ouroboros. Replace this with your real about /

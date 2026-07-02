@@ -82,7 +82,7 @@ export default function GalleryRoom() {
     <motion.div
       ref={targetRef}
       id="gallery"
-      className="relative h-[400vh] bg-wall pt-20"
+      className="relative h-[400vh] bg-wall pt-10"
       aria-label="Gallery room"
     >
       <div className="pl-10">
@@ -101,14 +101,14 @@ export default function GalleryRoom() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-2 block max-w-4xl font-display text-6xl font-light uppercase text-paper underline decoration-bronze/60 underline-offset-8 md:text-[5rem]"
+          className="mt-2 block max-w-4xl font-display text-2xl md:text-4xl lg:text-6xl font-light uppercase text-paper underline decoration-bronze/60 underline-offset-8 md:text-[5rem]"
         >
           Fresh on the air
         </motion.span>
       </div>
 
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-16 pl-[10vw]">
+        <motion.div style={{ x }} className="flex gap-8 md:gap-16 pl-[10vw]">
           {PIECES.map((piece, i) => (
             <PieceCard
               key={piece.id}
@@ -138,7 +138,7 @@ function PieceCard({ piece, index, total }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="flex w-[60vw] max-w-xl shrink-0 flex-col gap-5 border-l-2 border-bronze/60 md:w-[30vw]"
+      className="flex w-[100vw] md:w-[45vw] lg:w-[60vw] max-w-xl shrink-0 flex-col gap-5 border-l-2 border-bronze/60 "
     >
       <div className="relative aspect-[4/5] max-h-[30rem] w-[90%] overflow-hidden rounded-2xl bg-[#1a1512]">
         {/* eslint-disable-next-line @next/next/no-img-element */}

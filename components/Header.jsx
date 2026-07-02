@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from "motion/react";
 
 const LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/about", label: "About" },
   { href: "/#gallery", label: "Gallery" },
 ];
 
@@ -31,9 +31,7 @@ export default function Header() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-40 flex items-center justify-between px-5 sm:px-8 transition-all duration-500 ${
-          scrolled
-            ? "h-16 backdrop-blur-xs"
-            : "h-20 bg-transparent"
+          scrolled ? "h-16 backdrop-blur-xs" : "h-20 bg-transparent"
         }`}
       >
         <Link href="/" className="flex items-center gap-2 group">

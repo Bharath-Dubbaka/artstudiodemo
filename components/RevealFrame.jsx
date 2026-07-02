@@ -18,13 +18,13 @@ export default function RevealFrame({ eyebrow, title, children }) {
   return (
     <section
       ref={containerRef}
-      className="relative flex flex-col items-center bg-wall pb-12"
+      className="relative flex flex-col items-center bg-wall"
     >
-      <div className="mb-16 flex flex-col items-center gap-4 px-6 text-center relative top-50 z-10">
+      <div className="mb-16 flex flex-col items-center gap-4 px-6 text-center relative top-20 md:top-40 lg:top-50 z-10">
         <span className="font-mono text-bold text-md uppercase tracking-[0.3em] text-bronze">
           {eyebrow}
         </span>
-        <h2 className="max-w-4xl text-6xl md:text-[7rem] font-light text-paper font-mono">
+        <h2 className="max-w-4xl text-4xl md:text-[4rem] lg:text-[6rem] font-light text-paper font-mono">
           {title}
         </h2>
       </div>

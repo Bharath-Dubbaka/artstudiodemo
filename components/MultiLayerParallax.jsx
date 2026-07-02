@@ -21,7 +21,7 @@ export default function MultiLayerParallax() {
     >
       <motion.h1
         style={{ y: textY }}
-        className="font-bold text-bronze text-7xl md:text-[10rem] relative z-50 bottom-10 border-2 border-gray-200"
+        className="font-bold text-bronze text-5xl sm:text-[7rem] lg:text-[10rem] relative z-50 bottom-10 border-2 border-gray-200"
       >
         OUROBOROS
       </motion.h1>
@@ -48,7 +48,7 @@ export default function MultiLayerParallax() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="font-mono text-[10px] sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] text-gray-200"
+          className="font-mono text-[10px] sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] text-gray-200 pb-20 md:pb-4 lg:pb-0"
         >
           amalgamation of Performances, Workshops, Film Screenings, Art
           Exhibitions{" "}
