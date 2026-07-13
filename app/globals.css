@@ -10,6 +10,9 @@
   --font-display: var(--font-display), serif;
   --font-body: var(--font-body), sans-serif;
   --font-mono: var(--font-mono), monospace;
+  /* This automatically maps to utility classes like 'font-world' and 'font-montreal' */
+  --font-world: var(--font-neue-world), serif;
+  --font-montreal: var(--font-neue-montreal), sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {

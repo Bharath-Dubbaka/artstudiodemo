@@ -18,7 +18,7 @@ export default function DoorHero() {
   const titleY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
-  // Ouroboros ring: closes from a 20% gap to a full loop as you scroll in.
+  // dbk ring: closes from a 20% gap to a full loop as you scroll in.
   const CIRCUMFERENCE = 2 * Math.PI * 54;
   const dashOffset = useTransform(
     scrollYProgress,
@@ -43,7 +43,7 @@ export default function DoorHero() {
           <div className="h-[85vh] w-[70vw] max-w-3xl rounded-t-[140px] border-[14px] border-bronze-deep/60 bg-gradient-to-b from-[#241a12] to-transparent" />
         </motion.div>
 
-        {/* Title + ouroboros ring */}
+        {/* Title + dbk ring */}
         <motion.div
           style={{ y: titleY, opacity: titleOpacity }}
           className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-8 px-6 text-center"
@@ -69,7 +69,7 @@ export default function DoorHero() {
           </div>
 
           <h1 className="font-display text-6xl font-medium leading-[0.95] text-paper md:text-8xl">
-            Ouroboros
+            DBKarthub
           </h1>
           <p className="max-w-md font-mono text-sm tracking-wide text-stone">
             every ending is where the next piece begins — scroll to walk in

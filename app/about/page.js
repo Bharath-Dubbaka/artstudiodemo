@@ -30,14 +30,13 @@ export default function About() {
         className="mt-10 space-y-5 text-stone leading-relaxed"
       >
         <p>
-          Ouroboros Art Hub started as a question: what would a gallery feel
-          like if it never really ended — if the last room led you straight back
-          to the door you walked through.
+          DBK Art Hub started as a question: what would a gallery feel like if
+          it never really ended.. — web animation featuring a 3d perspective
+          scroll with images rotating on scroll. lorem
         </p>
         <p>
-          We work with painters, sculptors, filmmakers, and performers whose
-          work sits in that same loop — pieces that finish by pointing back at
-          where they began.
+          We work as sculptors, filmmakers, and performers... web animation
+          featuring a 3d perspective scroll with images rotating on scroll
         </p>
         <p>
           Replace this placeholder copy with your real founding story, mission,

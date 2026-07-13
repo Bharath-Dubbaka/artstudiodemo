@@ -17,13 +17,13 @@ export default function MultiLayerParallax() {
     <motion.div
       ref={ref}
       style={{ opacity: frameOpacity }}
-      className="w-full h-screen overflow-hidden relative grid place-items-center "
+      className="w-full h-[120vh] overflow-hidden relative grid place-items-center "
     >
       <motion.h1
         style={{ y: textY }}
-        className="font-bold text-bronze text-5xl sm:text-[7rem] lg:text-[10rem] relative z-50 bottom-10 border-2 border-gray-200"
+        className="font-bold text-bronze text-5xl sm:text-[7rem] lg:text-[10rem] relative z-10 md:z-50 bottom-14 md:bottom-10 border-2 border-gray-200"
       >
-        OUROBOROS
+        WELCOME 
       </motion.h1>
       <motion.div
         className="absolute inset-0 z-0"
@@ -43,7 +43,7 @@ export default function MultiLayerParallax() {
         }}
       />
       {/* Bottom info bar — trimmed down on mobile, full on desktop */}
-      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-4 sm:p-[3%] z-20">
+      <div className="absolute inset-x-0 bottom-40 flex items-end justify-between gap-4 p-4 sm:p-[3%] z-20">
         <motion.span
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function MultiLayerParallax() {
 //           />
 //           <img
 //             src="/gallery/02.webp"
-//             alt="Ouroboros — a room mid-performance"
+//             alt="DBK WebArt — a room mid-performance"
 //             className="h-full w-full object-cover"
 //           />
 //         </picture>
@@ -128,7 +128,7 @@ export default function MultiLayerParallax() {
 //               className="font-display font-semibold uppercase text-paper leading-[0.9] whitespace-nowrap
 //                          text-[11vw] sm:text-[7.5vw] lg:text-[6.2vw]"
 //             >
-//               Ouroboros
+//               DBKwebArt
 //             </motion.h1>
 //           </div>
 //         </div>

@@ -22,10 +22,10 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-12 sm:flex-row sm:justify-between">
         <div className="max-w-sm">
           <span className="font-mono text-xs uppercase tracking-[0.25em] text-paper">
-            Ouroboros
+            DBK Web Arts
           </span>
           <p className="mt-4 text-sm leading-relaxed text-stone">
-            Every ending is where the next piece begins. A space for work that
+            Every next piece begins with A space and time fabric that
             folds back on itself.
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function Footer() {
 
       <div className="mx-auto mt-16 flex max-w-6xl flex-col-reverse items-center gap-6 border-t border-bronze-deep/30 pt-6 sm:flex-row sm:justify-between">
         <span className="font-mono text-[11px] text-stone">
-          © {new Date().getFullYear()} Ouroboros Art Hub
+          © {new Date().getFullYear()} DBK Art Hub
         </span>
 
         <motion.button

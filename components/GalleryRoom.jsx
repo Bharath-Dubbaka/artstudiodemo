@@ -1,56 +1,56 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, useInView } from "motion/react";
 
 const PIECES = [
   {
     id: "01",
-    title: "Threshold",
-    artist: "M. Okafor",
+    title: "ESCAPE",
+    artist: "Mallala",
     year: "2024",
     medium: "oil on canvas",
-    imageUrl: "/gallery/01.webp",
+    imageUrl: "/gallery/01.jpg",
   },
   {
     id: "02",
     title: "Recursion",
-    artist: "L. Ferreira",
-    year: "2023",
+    artist: "W. Dubbbaka",
+    year: "2026",
     medium: "bronze, cast",
-    imageUrl: "/gallery/02.webp",
+    imageUrl: "/gallery/02.jpg",
   },
   {
     id: "03",
-    title: "Coil",
-    artist: "S. Yamada",
-    year: "2024",
+    title: "Stand OUT",
+    artist: "Infinite",
+    year: "2025",
     medium: "mixed media",
-    imageUrl: "/gallery/03.webp",
+    imageUrl: "/gallery/03.jpg",
   },
   {
     id: "04",
-    title: "Undone",
-    artist: "A. Petrov",
+    title: "Connor McGregor",
+    artist: "UFC 329",
     year: "2022",
     medium: "charcoal on paper",
-    imageUrl: "/gallery/04.webp",
+    imageUrl: "/gallery/04.jpg",
   },
   {
     id: "05",
     title: "Undone",
-    artist: "AA. Detrov",
+    artist: "Zetrov",
     year: "2021",
     medium: "chard",
-    imageUrl: "/gallery/02.webp",
+    imageUrl: "/gallery/02.jpg",
   },
   {
     id: "06",
-    title: "Undone",
-    artist: "AA. Detrov",
+    title: "Un-spoken",
+    artist: "XAZA",
     year: "2021",
     medium: "chard",
-    imageUrl: "/gallery/01.webp",
+    imageUrl: "/gallery/01.jpg",
   },
   {
     id: "07",
@@ -58,7 +58,7 @@ const PIECES = [
     artist: "AA. Detrov",
     year: "2021",
     medium: "chard",
-    imageUrl: "/gallery/04.webp",
+    imageUrl: "/gallery/04.jpg",
   },
 ];
 
@@ -77,36 +77,45 @@ export default function GalleryRoom() {
   // Thin bronze line filling as you move through the room — same "progress
   // toward the loop closing" idea as the ring in the hero/loader.
   const progressWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-
+  const inView = useInView(targetRef, {
+    amount: 0.2, // This replaces 'threshold'
+    once: false, // Set to true if you want 'triggerOnce' behavior
+  });
   return (
     <motion.div
       ref={targetRef}
       id="gallery"
-      className="relative h-[400vh] bg-wall pt-10"
+      className="relative h-[400vh] bg-wall pt-40 font-world"
       aria-label="Gallery room"
     >
-      <div className="pl-10">
-        <motion.span
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="block font-mono text-xs uppercase tracking-[0.3em] text-bronze"
-        >
-          Collection I
-        </motion.span>
-
-        <motion.span
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-2 block max-w-4xl font-display text-2xl md:text-4xl lg:text-6xl font-light uppercase text-paper underline decoration-bronze/60 underline-offset-8 md:text-[5rem]"
-        >
-          Fresh on the air
-        </motion.span>
-      </div>
-
+      <motion.div>
+        {/* Header */}
+        <div className="mb-16 pt-20">
+          <motion.p
+            ref={targetRef}
+            className="text-sm md:text-base text-gray-500 uppercase tracking-wider mb-3 pl-12"
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.2 }}
+          >
+            WHAT THE HECK IS THIS?
+          </motion.p>
+          <motion.h2
+            className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight pl-20"
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.3 }}
+          >
+            <span className="text-gray-600">I'M A GROWTH</span>
+            <br />
+            <span className="text-blue-600">PARTNER</span>
+            <br />
+            <span className="text-gray-600">AND PROBLEM-</span>
+            <br />
+            <span className="text-blue-600">BUILDS WHAT I DESIGN</span>
+          </motion.h2>
+        </div>
+      </motion.div>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-8 md:gap-16 pl-[10vw]">
           {PIECES.map((piece, i) => (
@@ -138,7 +147,7 @@ function PieceCard({ piece, index, total }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="flex w-[100vw] md:w-[45vw] lg:w-[60vw] max-w-xl shrink-0 flex-col gap-5 border-l-2 border-bronze/60 "
+      className="flex w-[100vw] md:w-[45vw] lg:w-[70vw] max-w-xl shrink-0 flex-col gap-5 border-l-2 border-bronze/60 "
     >
       <div className="relative aspect-[4/5] max-h-[30rem] w-[90%] overflow-hidden rounded-2xl bg-[#1a1512]">
         {/* eslint-disable-next-line @next/next/no-img-element */}

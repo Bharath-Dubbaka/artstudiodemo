@@ -18,7 +18,7 @@ export default function RevealFrame({ eyebrow, title, children }) {
   return (
     <section
       ref={containerRef}
-      className="relative flex flex-col items-center bg-wall"
+      className="relative flex flex-col items-center bg-black"
     >
       <div className="mb-16 flex flex-col items-center gap-4 px-6 text-center relative top-20 md:top-40 lg:top-50 z-10">
         <span className="font-mono text-bold text-md uppercase tracking-[0.3em] text-bronze">
