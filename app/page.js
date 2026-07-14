@@ -2,12 +2,15 @@ import MultiLayerParallax from "@/components/MultiLayerParallax";
 import GalleryRoom from "@/components/GalleryRoom";
 import RevealFrame from "@/components/RevealFrame";
 import ParallaxSlider from "@/components/ParalaxSlider";
+import ZoomGallery from "@/components/ZoomGallery";
+import RevealSection from "@/components/RevealSection";
+import GsapScroll from "@/components/gsapScroll/GsapScroll";
 
 export default function Home() {
   return (
     <main className="bg-wall">
       <MultiLayerParallax />
-      <GalleryRoom />
+      <ParallaxSlider />
       <RevealFrame eyebrow="Featured" title="BRINGING ART TO LIFE">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -16,14 +19,20 @@ export default function Home() {
           className="h-full w-full object-cover"
         />
       </RevealFrame>
-      <ParallaxSlider />
-      <div className="mx-auto max-w-xl space-y-6 px-6 py-12 md:py-20 lg:py-32 font-body text-stone">
+      {/* <div className="mx-auto max-w-xl space-y-6 px-6 py-12 md:py-20 lg:py-32 font-body text-stone">
         <p>
           Every room loops back to the door you came through — that&apos;s the
-          whole idea behind DBK. Replace this with your real about /
-          artist statement copy.
+          whole idea behind DBK. Replace this with your real about / artist
+          statement copy.
         </p>
-      </div>
+      </div> */}
+
+      <ZoomGallery />
+      <ParallaxSlider />
+
+      <RevealSection />
+      <GsapScroll />
+      <GalleryRoom />
     </main>
   );
 }
