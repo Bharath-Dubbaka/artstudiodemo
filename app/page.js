@@ -5,6 +5,7 @@ import ParallaxSlider from "@/components/ParalaxSlider";
 import ZoomGallery from "@/components/ZoomGallery";
 import RevealSection from "@/components/RevealSection";
 import GsapScroll from "@/components/gsapScroll/GsapScroll";
+import CardHolder from "@/components/CardHolder";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       </div> */}
 
       <ZoomGallery />
+      <CardHolder />
       <ParallaxSlider />
 
       <RevealSection />
